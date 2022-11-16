@@ -8,7 +8,8 @@
     }
 
     nav {
-        width: 100%;
+        width: min-content;
+        margin: auto;
         height: 20rem;
         display: flex;
         overflow-x: visible;

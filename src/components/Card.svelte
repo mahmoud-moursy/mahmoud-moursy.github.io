@@ -8,8 +8,8 @@
 	<a href={href}>
 		<h2>{title}</h2>
 		<p>{subtitle}</p>
-		<slot />
-	</a>	
+	</a>
+		<slot />	
 </div>
 
 <style>
