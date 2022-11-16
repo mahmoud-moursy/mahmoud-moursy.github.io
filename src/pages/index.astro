@@ -1,0 +1,84 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.svelte";
+import Carousel from "./carousel.svelte";
+---
+<style lang="scss">
+    :root {
+        --primary: #63e0b7;
+        --secondary: #e7801f;
+        --accent: #E6CE19;
+        --accent-compilemt: #E5B61A;
+        --text: rgb(0, 0, 0);
+    }
+
+    $left-margin: 30px;
+
+    h1, h2, h3, h4, h5, h6 {
+        margin-left: $left-margin;
+        max-width: 90vw;
+    }
+
+    p {
+        margin-left: $left-margin;
+    }
+
+    h1 {
+        font-size: clamp(20pt, 140pt, 15vw);
+    }
+
+    h2 {
+        font-size: clamp(10pt, 70pt, 10vw);
+    }
+
+    h3 {
+        font-size: clamp(10pt, 50pt, 10vw);
+    }
+
+    .gradient-fwd {
+        background: linear-gradient(90deg, var(--accent-compilemt), var(--accent));
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    .gradient-bwd {
+        background: linear-gradient(90deg, var(--accent), var(--accent-compilemt));
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+		border-radius: 20px;
+		background: gray;
+	}
+
+    header {
+        --dot-spacing: 22px;
+
+        height: 50vh;
+        min-height: 40rem;
+
+        background-color: white;
+        background-size: var(--dot-spacing) var(--dot-spacing);
+        background-image: radial-gradient(gray 2%, transparent 11%);
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: flex-start;
+    }
+</style>
+
+<Layout title="Mahmoud Moursy">
+    <header>
+        <div>
+            <h1>Mahmoud <span class="gradient-fwd">Moursy</span></h1>
+            <h2><span class="gradient-bwd">Backend Engineer</span></h2>
+        </div>
+    </header>
+
+    <Carousel />
+
+    <h3>OSS <span class="gradient-fwd">Contributions</span></h3>
+</Layout>
