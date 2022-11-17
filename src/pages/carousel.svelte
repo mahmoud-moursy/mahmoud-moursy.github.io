@@ -37,7 +37,6 @@
     <!--Duplicate elements-->
     {#each new Array(2) as _}
     <Card subtitle="A language with a LISP-like syntax." href="https://github.com/T-O-R-U-S/Shrimp3" title="Shrimp3">
-        <br>
         <code>
             <pre>@main() &lbrace;
     decl x [1 2 3 add(4 4)]
@@ -46,19 +45,20 @@
 &rbrace;</pre>
         </code>
     </Card>
-    <Card subtitle="A social media website with a sprinkle on top."  href="#" title="Donut Planet"        ></Card>
-    <Card subtitle="A fantasy console that runs on bytecode."        href="#" title="ATC Fantacy Console" >
-
+    <Card subtitle="A social media website with a sprinkle on top."   title="Donut Planet"        >
+        Donut Planet has no front-end yet!
     </Card>
-    <Card subtitle="A JavaScript preprocessor with syntactic sugar." href="#" title="KongScript"          >
-        <br>
+    <Card subtitle="A fantasy console that runs on bytecode."         title="ATC Fantacy Console" >
+        TODO (maybe add a webgpu demo?)
+    </Card>
+    <Card subtitle="A JavaScript preprocessor with syntactic sugar."  title="KongScript"          >
         <code>
             <pre>let add = (x y) -> x + y
 
 console.log(add(3 4))</pre>
         </code>
     </Card>
-    <Card href="#" title="Ipsum"></Card>
-    <Card href="#" title="Dolor"></Card>
+    <Card title="Ipsum"> TODO </Card>
+    <Card title="Dolor"> TODO </Card>
     {/each}
 </nav>
