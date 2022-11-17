@@ -5,20 +5,22 @@
 </script>
 
 <div>
-	<a href={href}>
+	<a href={href} target="_blank" rel="noopener noreferrer">
 		<h2>{title}</h2>
 		<p>{subtitle}</p>
 	</a>
 		<slot />	
 </div>
 
-<style>
+<style lang="scss">
+	@import '../styles/variables.scss';
+
 	div {
 		padding: 3rem;
 		margin: 2rem;
-		background-color: white;
+		background-color: var(--background);
 
-		outline-color: var(--accent);
+		outline-color: $accent;
 		outline-width: 5px;
 		outline-style: solid;
 		outline-offset: 0.5rem;
@@ -29,5 +31,11 @@
 
 		min-width: 30rem;
 		width: min-content;
+
+		transition: all 0.5s;
+	}
+
+	div:hover {
+		outline-offset: 1rem;
 	}
 </style>

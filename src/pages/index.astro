@@ -1,15 +1,28 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.svelte";
 import Carousel from "./carousel.svelte";
 ---
 <style lang="scss">
+    @import "../styles/variables.scss";
+
     :root {
-        --primary: #63e0b7;
-        --secondary: #e7801f;
-        --accent: #E6CE19;
-        --accent-compilemt: #E5B61A;
-        --text: rgb(0, 0, 0);
+		:has(#light:checked) {
+			--text: #000;
+			--background: #F6F6F6;
+			--background-contrast: #FFF;
+		}
+
+		:has(#solarized:checked) {
+			--text: #002b36;
+			--background: #eee8d5;
+			--background-contrast: #fdf6e3;
+		}
+
+		:has(#dark:checked) {
+			--text: #fff;
+			--background: #454545;
+			--background-contrast: #000;
+		}
     }
 
     $left-margin: 30px;
@@ -49,15 +62,29 @@ import Carousel from "./carousel.svelte";
     }
 
     .gradient-fwd {
-        background: linear-gradient(90deg, var(--accent-compilemt), var(--accent));
+        background: linear-gradient(90deg, $accent-compliment, $accent);
         -webkit-background-clip: text;
         color: transparent;
     }
 
     .gradient-bwd {
-        background: linear-gradient(90deg, var(--accent), var(--accent-compilemt));
+        background: linear-gradient(90deg, $accent, $accent-compliment);
         -webkit-background-clip: text;
         color: transparent;
+    }
+
+    #theme-controls {
+        position: fixed;
+
+        top: 1rem;
+        right: 1rem;
+
+        background-color: rgba(#000000, 0.2);
+        border-radius: 5rem;
+
+        padding: 0.5rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     header {
@@ -66,7 +93,7 @@ import Carousel from "./carousel.svelte";
         height: 50vh;
         min-height: 40rem;
 
-        background-color: white;
+        background-color: var(--background-contrast);
         background-size: var(--dot-spacing) var(--dot-spacing);
         background-image: radial-gradient(gray 2%, transparent 11%);
 
@@ -78,10 +105,34 @@ import Carousel from "./carousel.svelte";
     }
 </style>
 
+<script>
+    const theme_picker: NodeListOf<HTMLInputElement> = document.querySelectorAll('[name="theme"]');
+
+    theme_picker.forEach(x => {
+        x.addEventListener("click", () => {
+            localStorage.setItem("theme", x.value)
+        })
+    })
+
+    const theme_id = localStorage.getItem("theme") || "dark";
+
+    const theme: HTMLInputElement = document.querySelector(`[id="${theme_id}"]`);
+
+    theme.checked = true;
+</script>
+
 <Layout title="Mahmoud Moursy">
+    <div id="theme-controls">
+        <form>
+            <input type="radio" name="theme" id="dark" value="dark" checked>
+            <input type="radio" name="theme" id="solarized" value="solarized">
+            <input type="radio" name="theme" id="light" value="light">
+        </form>
+    </div>
+
     <header>
         <div>
-            <h1>Mahmoud <span class="gradient-fwd">Moursy</span></h1>
+            <h1>Mahmoud <span class="gradient-fwd">Moursy</span>.</h1>
             <h2><span class="gradient-bwd">Backend Engineer</span></h2>
         </div>
     </header>

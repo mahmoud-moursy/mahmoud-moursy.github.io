@@ -455,19 +455,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@example/basics@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@example/basics@workspace:."
-  dependencies:
-    "@astrojs/svelte": ^1.0.2
-    astro: ^1.6.7
-    sass: ^1.56.1
-    stylelint-config-recommended-scss: ^8.0.0
-    stylelint-config-standard: ^29.0.0
-    svelte: ^3.46.4
-  languageName: unknown
-  linkType: soft
-
 "@gar/promisify@npm:^1.1.3":
   version: 1.1.3
   resolution: "@gar/promisify@npm:1.1.3"
@@ -4305,6 +4292,19 @@ __metadata:
   checksum: 9863e3f35132bf99ae1636d31ff1e1e3501251d480336edb1c211133c8d58906bed80f154a1d723652df1fda91e01c7442c2eeaf9dc83157c7ae89087e43c8d6
   languageName: node
   linkType: hard
+
+"portfolio-page@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "portfolio-page@workspace:."
+  dependencies:
+    "@astrojs/svelte": ^1.0.2
+    astro: ^1.6.7
+    sass: ^1.56.1
+    stylelint-config-recommended-scss: ^8.0.0
+    stylelint-config-standard: ^29.0.0
+    svelte: ^3.46.4
+  languageName: unknown
+  linkType: soft
 
 "postcss-load-config@npm:^3.1.4":
   version: 3.1.4
