@@ -80,7 +80,7 @@ import Carousel from "./carousel.svelte";
         right: 1rem;
 
         background-color: rgba(#000000, 0.2);
-        border-radius: 5rem;
+        border-radius: 5px;
 
         padding: 0.5rem;
         padding-left: 1rem;
@@ -103,11 +103,18 @@ import Carousel from "./carousel.svelte";
         justify-content: center;
         align-items: flex-start;
     }
+
+    label[for="theme-picker"] {
+        font-family: monospace;
+        color: white;
+        text-shadow: rgba(#000000, 0.4) 1px 1px 5px;
+        font-weight: bolder;
+    }
 </style>
 
 <script>
     const theme_picker: NodeListOf<HTMLInputElement> = document.querySelectorAll('[name="theme"]');
-
+    
     theme_picker.forEach(x => {
         x.addEventListener("click", () => {
             localStorage.setItem("theme", x.value)
@@ -123,7 +130,8 @@ import Carousel from "./carousel.svelte";
 
 <Layout title="Mahmoud Moursy">
     <div id="theme-controls">
-        <form>
+        <label for="theme-picker">Theme.</label>
+        <form name="theme-picker">
             <input type="radio" name="theme" id="dark" value="dark" checked>
             <input type="radio" name="theme" id="solarized" value="solarized">
             <input type="radio" name="theme" id="light" value="light">
