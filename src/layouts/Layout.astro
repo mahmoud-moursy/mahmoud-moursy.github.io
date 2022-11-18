@@ -1,4 +1,6 @@
 ---
+import '../styles/global.scss'
+
 export interface Props {
 	title: string;
 }
@@ -15,69 +17,6 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-
-	<style lang="scss" is:global >
-		@import "../styles/variables.scss";
-		
-		* {
-			margin: 0;
-			box-sizing: border-box;
-			color: var(--text);
-		}
-
-		:root {
-			:has(#light:checked) {
-				--text: #000;
-				--background: #F6F6F6;
-				--background-contrast: #FFF;
-			}
-
-			:has(#solarized:checked) {
-				--text: #002b36;
-				--background: #eee8d5;
-				--background-contrast: #fdf6e3;
-			}
-
-			:has(#dark:checked) {
-				--text: #fff;
-				--background: #454545;
-				--background-contrast: #000;
-			}
-		}
-	
-		a {
-			text-decoration: none;
-
-			* {
-				color: $accent;
-	
-				:visited {
-					color: $accent-compliment;
-				}
-			}
-		}
-	
-		html {
-			font-family: system-ui, sans-serif;
-			background-color: var(--background);
-			overflow-x: hidden;
-		}
-
-		body {
-			background-color: var(--background);
-		}
-
-		body * {
-			transition: all 0.2s;
-		}
-
-		code {
-			font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-				Bitstream Vera Sans Mono, Courier New, monospace;
-	
-			text-align: left;
-		}
-	</style>
 
 	<body>
 		<slot />

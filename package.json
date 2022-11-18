@@ -18,5 +18,8 @@
     "stylelint-config-standard": "^29.0.0",
     "svelte": "^3.46.4"
   },
-  "packageManager": "yarn@3.3.0"
+  "packageManager": "yarn@3.3.0",
+  "dependencies": {
+    "astro-icon": "^0.8.0"
+  }
 }

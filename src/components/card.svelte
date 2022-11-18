@@ -14,26 +14,23 @@
 </div>
 
 <style lang="scss">
-	@import '../styles/variables.scss';
+	@use "../styles/mixins.scss" as mixins;
 
 	div {
+		@include mixins.outline-hover;
+
 		padding: 3rem;
 		margin: 2rem;
 		background-color: var(--background);
-
-		outline-color: $accent;
-		outline-width: 5px;
-		outline-style: solid;
-		outline-offset: 0.5rem;
-		
-		border-radius: 1rem;
 
 		text-align: center;
 
 		min-width: 30rem;
 		width: min-content;
-
-		transition: all 0.5s;
+	
+		h2 {
+			font-size: 20pt;
+		}
 	}
 
 	div:hover {

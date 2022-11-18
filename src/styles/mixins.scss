@@ -1,0 +1,14 @@
+@mixin outline-hover {
+    outline-color: var(--accent);
+	outline-width: 5px;
+	outline-style: solid;
+	outline-offset: 0.5rem;
+
+    border-radius: 1rem;
+    
+    :hover {
+        transition: all 0.5s;
+
+        outline-offset: 1rem;
+    }
+}

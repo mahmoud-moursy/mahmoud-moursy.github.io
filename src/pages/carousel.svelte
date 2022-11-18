@@ -1,5 +1,5 @@
 <script>
-    import Card from '../components/Card.svelte';
+    import Card from '../components/card.svelte';
 </script>
 
 <style>
@@ -22,8 +22,6 @@
 
     nav:hover {
         animation-play-state: paused;
-
-        
     }
 
     @keyframes slide {
@@ -46,10 +44,10 @@
         </code>
     </Card>
     <Card subtitle="A social media website with a sprinkle on top."   title="Donut Planet"        >
-        Donut Planet has no front-end yet!
+       <p>Donut Planet has no front-end yet!</p>
     </Card>
     <Card subtitle="A fantasy console that runs on bytecode."         title="ATC Fantacy Console" >
-        TODO (maybe add a webgpu demo?)
+        <p>TODO (maybe add a webgpu demo?)</p>
     </Card>
     <Card subtitle="A JavaScript preprocessor with syntactic sugar."  title="KongScript"          >
         <code>
@@ -58,7 +56,11 @@
 console.log(add(3 4))</pre>
         </code>
     </Card>
-    <Card title="Ipsum"> TODO </Card>
-    <Card title="Dolor"> TODO </Card>
+    <Card subtitle="A small operating system for a small world." title="picOS">
+        Add a screenshot?
+    </Card>
+    <Card title="Dolor">
+
+    </Card>
     {/each}
 </nav>

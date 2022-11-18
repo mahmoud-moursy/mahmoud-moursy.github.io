@@ -1,0 +1,132 @@
+@use "mixins.scss" as mixins;
+
+$margin: 30px;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-left: $margin;
+    max-width: 90vw;
+}
+
+.gradient-fwd {
+    background: linear-gradient(90deg, var(--accent-compliment), var(--accent));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.gradient-bwd {
+    background: linear-gradient(90deg, var(--accent), var(--accent-compliment));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+p {
+    margin-left: $margin;
+    font-size: 10pt;
+}
+
+h1 {
+    font-size: clamp(25pt, 140pt, 15vw);
+}
+
+h2 {
+    font-size: clamp(20pt, 70pt, 10vw);
+}
+
+h3 {
+    font-size: clamp(15pt, 50pt, 10vw);
+}
+
+h4 {
+    font-size: clamp(10pt, 30pt, 10vw);
+}
+
+h5 {
+    font-size: 10pt;
+}
+
+h6 {
+    font-size: 5pt;
+}
+
+#theme-controls {
+    position: fixed;
+
+    top: 1rem;
+    right: 1rem;
+
+    background-color: rgba(#000000, 0.2);
+    border-radius: 5px;
+
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    z-index: 99999;
+}
+
+header {
+    --dot-spacing: 22px;
+
+    height: 50vh;
+    min-height: 40rem;
+
+    background-color: var(--background-contrast);
+    background-size: var(--dot-spacing) var(--dot-spacing);
+    background-image: radial-gradient(gray 2%, transparent 11%);
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: flex-start;
+}
+
+label[for="theme-picker"] {
+    font-family: monospace;
+    color: white;
+    text-shadow: rgba(#000000, 0.4) 1px 1px 5px;
+    font-weight: bolder;
+}
+
+#oss-contributions {
+    display: grid;
+
+    height: min-content;
+
+    width: min-content;
+
+    grid-template-areas: 
+    "rust rust"
+    "hyper svelte"
+    "nodejs nextjs";
+
+    column-gap: 3rem;
+    row-gap: 3rem;
+    
+    margin: auto;
+
+    > div {
+        @include mixins.outline-hover;
+
+        background-color: var(--background-contrast);
+
+        p,h4,h5 {
+            margin-left: 0;
+        }
+
+        padding: 2rem;
+    }
+
+    margin-bottom: $margin;
+}
+
+.rust {
+    grid-area: rust;
+}

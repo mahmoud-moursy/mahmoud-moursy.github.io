@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Inconsolata&family=Open+Sans:wght@500;600;800&display=swap');
+
+$margin: 30px;
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--text);
+}
+
+:root {
+    --accent: #E6CE19;
+    --accent-compliment: #E5B61A;
+
+    :has(#light:checked) {
+        --text: #000;
+        --background: #F6F6F6;
+        --background-contrast: #FFF;
+    }
+
+    :has(#solarized:checked) {
+        --text: #002b36;
+        --background: #eee8d5;
+        --background-contrast: #fdf6e3;
+    }
+
+    :has(#dark:checked) {
+        --text: #fff;
+        --background: #222222;
+        --background-contrast: #2e2e2e;
+
+        header, nav {
+            --background-contrast: #1c1c1c;
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+
+
+    * {
+        color: var(--accent);
+
+        :visited {
+            color: var(--accent-compliment);
+        }
+    }
+}
+
+html {
+    font-family: Open Sans, sans-serif, system-ui;
+    background-color: var(--background);
+    overflow-x: hidden;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin-left: $margin;
+    margin-right: $margin;
+}
+
+h3 {
+    margin-bottom: $margin;
+}
+
+p, h4, h5, h6 {
+    font-family: EB Gramond, serif;
+}
+
+body {
+    background-color: var(--background);
+
+    * {
+        transition-duration: 0.2s;
+    }
+}
+
+code {
+    font-family: Inconsolata, monospace;
+
+    text-align: left;
+}
