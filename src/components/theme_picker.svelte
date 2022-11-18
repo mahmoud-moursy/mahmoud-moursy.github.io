@@ -1,5 +1,14 @@
 <script>
-    let theme = localStorage.getItem("theme") || "dark";
+    import { onMount } from "svelte";
+
+
+    let dark;
+
+    onMount(() => {
+        dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    });
+
+    let theme = localStorage.getItem("theme") || (dark ? "dark" : "solarized");
 
     function saveTheme() {
         localStorage.setItem("theme", theme)
