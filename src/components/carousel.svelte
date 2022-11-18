@@ -5,7 +5,7 @@
 <style lang="scss">
 	nav {
 		margin: auto;
-		height: 20rem;
+		min-height: 20rem;
 		display: flex;
 
 		transition: all 0.5s;
@@ -43,8 +43,9 @@
 	{#each new Array(2) as _}
 	<Card subtitle="A language with a LISP-like syntax." href="https://github.com/T-O-R-U-S/Shrimp3" title="Shrimp3">
 		<code><pre>
-{`@main() {decl x [1 2 3 add(4 4)]
-	x[3] -&gt; y
+{`@main() {
+	decl x [1 2 3 add(4 4)]
+	x[3] -> y
 	println(x) # Outputs 8. #
 }`}</pre></code>
 	</Card>

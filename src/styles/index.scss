@@ -29,6 +29,10 @@ h6 {
 p {
     margin-left: $margin;
     font-size: 10pt;
+
+    @media screen and (max-width: 6in) {
+        font-size: 14pt;
+    }
 }
 
 h1 {

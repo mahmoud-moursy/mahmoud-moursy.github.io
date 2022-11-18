@@ -29,6 +29,12 @@
 
 		min-width: 30rem;
 		width: min-content;
+		max-width: calc(100vw - 3rem);
+
+		// Remove theming for Safari (which does not render outline radii correctly.)
+		_::-webkit-full-page-media, _:future, :root {
+			outline-style: none;
+		}
 	
 		h2 {
 			font-size: 20pt;
