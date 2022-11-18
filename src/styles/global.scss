@@ -9,6 +9,8 @@ $margin: 30px;
 }
 
 :root {
+    overflow-x: hidden;
+
     --accent: #E6CE19;
     --accent-compliment: #E5B61A;
 
@@ -37,11 +39,14 @@ $margin: 30px;
 
 a {
     text-decoration: none;
+    color: var(--accent);
 
+    :visited {
+        color: var(--accent-compliment);
+    }
 
     * {
         color: var(--accent);
-
         :visited {
             color: var(--accent-compliment);
         }
@@ -51,7 +56,6 @@ a {
 html {
     font-family: Open Sans, sans-serif, system-ui;
     background-color: var(--background);
-    overflow-x: hidden;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -79,4 +83,10 @@ code {
     font-family: Inconsolata, monospace;
 
     text-align: left;
+}
+
+footer {
+    width: 100%;
+    background-color: var(--background-contrast);
+    padding: 1rem;
 }

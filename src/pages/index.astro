@@ -1,36 +1,13 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Carousel from "./carousel.svelte";
+import Layout from "../layouts/layout.astro";
+import Carousel from "../components/carousel.svelte";
+import ThemePicker from "../components/theme_picker.svelte";
 
 import "../styles/index.scss";
 ---
-
-<script>
-    const theme_picker: NodeListOf<HTMLInputElement> = document.querySelectorAll('[name="theme"]');
-    
-    theme_picker.forEach(x => {
-        x.addEventListener("click", () => {
-            localStorage.setItem("theme", x.value)
-        })
-    })
-
-    const theme_id = localStorage.getItem("theme") || "dark";
-
-    const theme: HTMLInputElement = document.querySelector(`[id="${theme_id}"]`);
-
-    theme.checked = true;
-</script>
+<ThemePicker client:load />
 
 <Layout title="Mahmoud Moursy">
-    <div id="theme-controls">
-        <label for="theme-picker">Theme.</label>
-        <form name="theme-picker">
-            <input type="radio" name="theme" id="dark" value="dark" checked>
-            <input type="radio" name="theme" id="solarized" value="solarized">
-            <input type="radio" name="theme" id="light" value="light">
-        </form>
-    </div>
-
     <header>
         <div>
             <h1>Mahmoud <span class="gradient-fwd">Moursy</span>.</h1>
@@ -38,7 +15,7 @@ import "../styles/index.scss";
         </div>
     </header>
 
-    <Carousel />
+    <Carousel client:idle />
 
     <h3>OSS <span class="gradient-fwd">Contributions</span></h3>
 
@@ -70,7 +47,7 @@ import "../styles/index.scss";
             <h4>Node.JS</h4>
 
             <p>
-                Contributed to docs regarding finding memory leaks within Node's sourcecode
+                Contributed to docs regarding finding memory leaks within Node's source code
             </p>
         </div>
         <div>

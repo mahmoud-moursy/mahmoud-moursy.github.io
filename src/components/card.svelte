@@ -1,16 +1,18 @@
 <script>
 	export let subtitle = "";
-	export let href = "";
+	export let href = "#";
 	export let title = "Filler";
+
+	let rel = href == "#" ? "nofollow" : "ugc";
 </script>
 
 <div>
-	<a href={href} target="_blank" rel="noopener noreferrer">
+	<a href={href} target="_blank" rel={`${rel} noopener noreferrer`}>
 		<h2>{title}</h2>
 		<p>{subtitle}</p>
 	</a>
 	<br>
-		<slot />	
+		<slot />
 </div>
 
 <style lang="scss">
