@@ -40,10 +40,8 @@
 		@media screen and (max-width: 7in) {
 			min-width: unset;
 			max-width: unset;
-			
-			border-radius: 0;
 
-			width: 100%;
+			width: 95%;
 		}
 	
 		h2 {

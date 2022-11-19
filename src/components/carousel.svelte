@@ -12,6 +12,13 @@
 
 		@media screen and (max-width: 7in) {
 			height: 20rem;
+
+			border-width: 0;
+			border-top-width: 5px;
+			border-bottom-width: 5px;
+
+			border-style: solid;
+			border-color: var(--accent);
 		}
 
 		justify-self: flex-end;
@@ -25,22 +32,21 @@
 		align-items: center;
 
 		// Mobile only
-		overflow-y: hidden;
-		animation: 26s linear slide-vertical infinite;
+		overflow-y: visible;
+		animation: 45s linear slide-vertical infinite;
 		flex-direction: column;
-		height: min-content;
-		
+		height: max-content;
 
 		// Desktop
 		@media screen and (min-width: 7in) {
-			min-height: 20rem;
+			height: max-content;
 
 			align-items: initial;
 
 			width: min-content;
 
 			animation: 26s linear slide infinite;
-			overflow-x: hidden;
+			overflow: hidden;
 			flex-direction: initial;
 		}
 
@@ -70,19 +76,19 @@
 
 	@keyframes slide {
 		0% {
-			translate: 0 0;
+			transform: translateX(0);
 		}
   		100% {
-			translate: -50% 0;
+			transform: translateX(-50%);
 		}
 	}
 
 	@keyframes slide-vertical {
 		0% {
-			translate: 0 0;
+			transform: translateY(0);
 		}
   		100% {
-			translate: 0 -50%;
+			transform: translateY(-50%);
 		}
 	}
 </style>
