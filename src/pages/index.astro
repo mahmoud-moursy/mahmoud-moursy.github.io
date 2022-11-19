@@ -5,18 +5,18 @@ import ThemePicker from "../components/theme_picker.svelte";
 
 import "../styles/index.scss";
 ---
-
-<h4 class="red-banner">I'm a work-in-progress!</h4>
-
 <ThemePicker client:load />
 
 <Layout title="Mahmoud Moursy">
     <header>
+        <h4 class="red-banner">I'm a work-in-progress!</h4>
+
         <div>
             <h1>Mahmoud <span class="gradient-fwd">Moursy</span>.</h1>
             <h2><span class="gradient-bwd">Backend Engineer</span></h2>
         </div>
         <Carousel client:idle />
+        <a href="#showcase">&downarrow;</a>
     </header>
 
     <div id="showcase">

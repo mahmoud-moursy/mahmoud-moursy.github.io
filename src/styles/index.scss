@@ -33,26 +33,25 @@ h6 {
     margin: 0;
     font-family: 'Open Sans';
     overflow-y: hidden;
-    animation: linear move-up 5s forwards;
-    transition: all;
+
+    animation: linear forwards 5s hide;
+    transition: all 0.5s;
 }
 
-@keyframes move-up {
+@keyframes hide {
     0% {
-        height: max(3.5rem, 5vh);
+        height: 3rem;
     }
     95% {
-        height: max(3.5rem, 5vh);
+        height: 3rem;
     }
     100% {
-        height: 0vh;
+        height: 0px;
     }
 }
 
 header {
     --dot-spacing: 22px;
-
-    min-height: 40rem;
 
     // Dotted grid effect
     background-color: var(--background-contrast);
@@ -67,19 +66,25 @@ header {
 
     width: 100%;
 
-    animation: linear counter-expansion 5s forwards;
     transition: all;
-}
 
-@keyframes counter-expansion {
-    0% {
-        height: calc(100vh - max(3.5rem, 5vh));
+    height: 100vh;
+
+    > div {
+        flex-grow: 1;
     }
-    95% {
-        height: calc(100vh - max(3.5rem, 5vh));
-    }
-    100% {
-        height: 100vh;
+
+    > a {
+        text-align: center;
+        margin: auto;
+        background: transparent;
+        border: none;
+        font-weight: bold;
+        font-size: 4vw;
+
+        :hover {
+            --accent: var(--accent-contrast);
+        }
     }
 }
 
