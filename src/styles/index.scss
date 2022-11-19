@@ -68,8 +68,8 @@ header {
 
     transition: all;
 
-    height: 100vh;
-    min-height: max-content;
+    height: max-content;
+    min-height: 100vh;
 
     > div {
         flex-grow: 1;

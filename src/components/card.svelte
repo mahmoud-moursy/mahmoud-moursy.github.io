@@ -1,10 +1,10 @@
 <script>
 	export let subtitle = "";
-	export let href = "https://github.com/T-O-R-U-S/";
+	export let href = "#";
 	export let title = "Filler";
 	export let project = "";
 
-	href = project ? href + project : "#";
+	href = project ? "https://github.com/T-O-R-U-S/" + project : "#";
 </script>
 
 <div>
