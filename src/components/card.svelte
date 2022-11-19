@@ -4,7 +4,7 @@
 	export let title = "Filler";
 	export let project = "";
 
-	href = project ? "#" : href + project;
+	href = project ? href + project : "#";
 </script>
 
 <div>
@@ -41,17 +41,9 @@
 			min-width: unset;
 			max-width: unset;
 			
-			width: 100%;
-
-			outline-style: none;
 			border-radius: 0;
 
-			border-width: 2px;
-			border-style: solid;
-			border-color: var(--accent);
-
-			border-left-width: 0;
-			border-right-width: 0;
+			width: 100%;
 		}
 	
 		h2 {

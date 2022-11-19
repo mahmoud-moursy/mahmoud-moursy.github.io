@@ -93,7 +93,7 @@
 <nav>
 	<!--Duplicate elements-->
 	{#each new Array(2) as _}
-	<Card subtitle="A language with a LISP-like syntax." project="Shrimp3" title="Shrimp3">
+	<Card subtitle="A language with a LISP-like syntax." project="Shrimp3" title="Shrimp3" >
 		<code><pre>
 {`@main() {
 	decl x [1 2 3 add(4 4)]
@@ -107,7 +107,7 @@
 	<Card subtitle="A fantasy console that runs on bytecode."         title="ATC Fantacy Console" project="atc_console" >
 		<p>TODO (maybe add a webgpu demo?)</p>
 	</Card>
-	<Card subtitle="A JavaScript preprocessor with syntactic sugar."  title="KongScript"          >
+	<Card subtitle="A JavaScript preprocessor with syntactic sugar."  title="KongScript" project="kongscript">
 		<code>
 			<pre>let add = (x y) -> x + y
 

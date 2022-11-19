@@ -193,7 +193,7 @@ label[for="theme-picker"] {
             padding-right: 0;
         }
 
-        column-span: 1;
+        
     }
 
     > div > div {
@@ -242,18 +242,28 @@ label[for="theme-picker"] {
 #toolbox {
     font-weight: bolder;
 
-    height: 40vh;
+    height: fit-content;
 
     ul {
         display: flex;
-        flex-direction: column;
         flex-wrap: wrap;
-        height: 100%;
+        flex-direction: row;
     }
 
     li {
-        line-height: 1.45rem;
+        margin: 0.5rem;
+        list-style-position: inside;
+        width: fit-content;
+        overflow-wrap: break-word;
+        break-after: always;
+        hyphens: auto;
     }
+}
+
+[astro-icon] {
+    height: 1em;
+    fill: var(--accent);
+    color: var(--accent);
 }
 
 .hidden {

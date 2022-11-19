@@ -3,14 +3,14 @@ import Layout from "../layouts/layout.astro";
 import Carousel from "../components/carousel.svelte";
 import ThemePicker from "../components/theme_picker.svelte";
 
+import { Icon } from "astro-icon";
+
 import "../styles/index.scss";
 ---
-<ThemePicker client:load />
+<ThemePicker client:visible />
 
 <Layout title="Mahmoud Moursy">
     <header>
-        <h4 class="red-banner">I'm a work-in-progress!</h4>
-
         <div>
             <h1>Mahmoud <span class="gradient-fwd">Moursy</span>.</h1>
             <h2><span class="gradient-bwd">Backend Engineer</span></h2>
@@ -85,19 +85,59 @@ import "../styles/index.scss";
             <div>
                 <div id="toolbox">
                     <ul>
-                        <li>Svelte</li>
-                        <li>TailwindCSS</li>
-                        <li>Scss</li>
-                        <li>Rust</li>
-                        <li>JavaScript/EcmaScript</li>
-                        <li>TypeScript</li>
-                        <li>Python</li>
-                        <li>Node.JS</li>
-                        <li>Deno</li>
-                        <li>WASM</li>
-                        <li>MySQL (and other SQL DBs)</li>
-                        <li>MongoDB</li>
-                        <li>Astro</li>
+                        <li>
+                            <Icon name="simple-icons:svelte" />
+                            Svelte
+                        </li>
+                        <li>
+                            <Icon name="simple-icons:tailwindcss" />
+                            TailwindCSS
+                        </li>
+                        <li>
+                            <Icon name="simple-icons:sass" />
+                            Sass/Scss
+                        </li>
+                        <li>
+                            <Icon name="simple-icons:rust" />
+                            Rust
+                        </li>
+                        <li>
+                            <Icon name="simple-icons:javascript"/>
+                            JavaScript
+                        </li>
+                        <li>
+                            <Icon name="simple-icons:typescript"/>
+                            TypeScript
+                        </li>
+                        <li>
+                            <Icon name="simple-icons:python"/>
+                            Python
+                        </li>
+                        <li>
+                            <Icon name="simple-icons:nodejs"/>
+                            Node.JS
+                        </li>
+                        <li>
+                            <Icon name="simple-icons:deno"/>
+                            Deno
+                        </li>
+                        <li>
+                            <Icon name="simple-icons:webassembly"/>
+                            WebAssembly
+                        </li>
+                        <li>
+                            <!-- simple-icons:mysql looks bad at small font sizes. -->
+                            <Icon name="fontisto:mysql"/>
+                            MySQL (and other SQL DBs <Icon name="simple-icons:postgresql" /> )
+                        </li>
+                        <li>
+                            <Icon name="simple-icons:mongodb" />
+                            MongoDB
+                        </li>
+                        <li>
+                            <Icon name="simple-icons:astro" />
+                            Astro
+                        </li>
                     </ul>
                 </div>
             </div>
