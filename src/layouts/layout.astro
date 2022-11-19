@@ -1,5 +1,6 @@
 ---
 import '../styles/global.scss'
+import ThemePicker from '../components/theme_picker.svelte';
 
 export interface Props {
 	title: string;
@@ -21,6 +22,7 @@ const { title } = Astro.props;
 
 	<body>
 		<slot />
+		<ThemePicker client:visible />
 		<footer>
 			<b>
 				<p>Made with <a href="https://astro.build" rel="sponsored">Astro</a></p>

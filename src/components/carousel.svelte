@@ -11,7 +11,7 @@
 		min-height: max-content;
 
 		@media screen and (max-width: 7in) {
-			height: 22rem;
+			height: 20rem;
 		}
 
 		justify-self: flex-end;
@@ -118,7 +118,7 @@ console.log(add(3 4))</pre>
 		Add a screenshot?
 	</Card>
 	<Card subtitle="An OS simulator for a simpler age." title="CronexOS" project="cronexOS-y">
-		
+
 	</Card>
 	{/each}
 </nav>
