@@ -101,13 +101,22 @@
 	println(x) # Outputs 8. #
 }`}</pre></code>
 	</Card>
-	<Card subtitle="A social media website with a sprinkle on top."   title="Donut Planet">
-	   <p>Donut Planet has no front-end yet!</p>
+	<Card subtitle="A social media website with a sprinkle on top."   title="Donut Planet" project="donut-planet-backend">
+	   <p>
+			Donut Planet is a social media app whose gimmick is that it <b>creates progression</b>. You must earn sprinkles to earn features such as
+			markdown language features, profile accent colours, profile pictures (to help filter out trolls) and potentially more. All users are given
+			an initial amount of sprinkles to purchase the basics (bold markdown text, profile picture, username change).
+		</p>
 	</Card>
 	<Card subtitle="A fantasy console that runs on bytecode."         title="ATC Fantacy Console" project="atc_console" >
-		<p>TODO (maybe add a webgpu demo?)</p>
+		<p>
+			The ATC Fantasy console has a whole ecosystem of applications; the <a href="https://github.com/T-O-R-U-S/bytecode_byter">ATC Byter</a> for 
+			code analysis, the <a href="https://github.com/T-O-R-U-S/asc_lang">ASC language</a> for writing code for the system and the 
+			<a href="https://github.com/T-O-R-U-S/atc_console">console emulator</a>.
+		</p>
 	</Card>
 	<Card subtitle="A JavaScript preprocessor with syntactic sugar."  title="KongScript" project="kongscript">
+		<h5>Note: KongScript is a work-in-progress</h5>
 		<code>
 			<pre>let add = (x y) -> x + y
 
@@ -115,10 +124,30 @@ console.log(add(3 4))</pre>
 		</code>
 	</Card>
 	<Card subtitle="A small operating system." title="FiddleOS">
-		Add a screenshot?
+		<h5>Note: FiddleOS is a work-in-progress</h5>
+		<p>
+			FiddleOS is an operating system that's small, and can run on x86_64 desktops. <br>
+			Planned features include:	
+		</p>
+		<ul>
+			<li>Text editor</li>
+			<li>Filesystem</li>
+			<li>Executables</li>
+			<li>(Potentially) scripting</li>
+		</ul>
 	</Card>
 	<Card subtitle="An OS simulator for a simpler age." title="CronexOS" project="cronexOS-y">
-
+		<p>
+			CronexOS is a web-browser simulation OS that takes after the likeness of AmigaOS and Windows 
+			9x to create a fun experience.
+			Features include: <br>
+		</p>
+		<ul>
+			<li>Changing backgrounds</li>
+			<li>Text editor</li>
+			<li>"Web" browser</li>
+			<li>An application menu</li>
+		</ul>
 	</Card>
 	{/each}
 </nav>
