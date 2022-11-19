@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Inconsolata&family=Open+Sans:wght@500;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Inconsolata&family=Open+Sans:wght@400;500;800&display=swap');
 
 $mobile-design-threshold: 600px;
 
@@ -8,7 +8,7 @@ $margin: 30px;
     margin: 0;
     box-sizing: border-box;
     color: var(--text);
-    font-family: "EB Gramond", serif;
+    
     overflow-wrap: break-word;
     transition: all 0.2s;
 }
@@ -98,7 +98,7 @@ h1,h2,h3 {
     }
 }
 
-p, h4, h5, h6 {
+p, a, h4, h5, h6 {
     font-family: "EB Gramond", serif;
 }
 
@@ -112,7 +112,7 @@ body {
 }
 
 code {
-    font-family: "Inconsolata", monospace;
+    font-family: 'Inconsolata', monospace;
 
     text-align: left;
 }

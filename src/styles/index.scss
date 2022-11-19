@@ -49,6 +49,40 @@ h6 {
     }
 }
 
+header {
+    --dot-spacing: 22px;
+
+    min-height: 40rem;
+
+    // Dotted grid effect
+    background-color: var(--background-contrast);
+    background-size: var(--dot-spacing) var(--dot-spacing);
+    background-image: radial-gradient(gray 2%, transparent 11%);
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: flex-start;
+
+    width: 100%;
+
+    animation: linear counter-expansion 5s forwards;
+    transition: all;
+}
+
+@keyframes counter-expansion {
+    0% {
+        height: calc(100vh - max(3.5rem, 5vh));
+    }
+    95% {
+        height: calc(100vh - max(3.5rem, 5vh));
+    }
+    100% {
+        height: 100vh;
+    }
+}
+
 p {
     margin-left: $margin;
     font-size: 10pt;
@@ -107,26 +141,6 @@ h6 {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-header {
-    --dot-spacing: 22px;
-
-    height: 100vh;
-    min-height: 40rem;
-
-    // Dotted grid effect
-    background-color: var(--background-contrast);
-    background-size: var(--dot-spacing) var(--dot-spacing);
-    background-image: radial-gradient(gray 2%, transparent 11%);
-
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-    align-items: flex-start;
-
-    width: 100%;
 }
 
 label[for="theme-picker"] {
