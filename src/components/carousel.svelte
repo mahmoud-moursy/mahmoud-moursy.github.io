@@ -114,11 +114,11 @@
 console.log(add(3 4))</pre>
 		</code>
 	</Card>
-	<Card subtitle="A small operating system for a small world." title="picOS">
+	<Card subtitle="A small operating system." title="FiddleOS">
 		Add a screenshot?
 	</Card>
 	<Card subtitle="An OS simulator for a simpler age." title="CronexOS" project="cronexOS-y">
-
+		
 	</Card>
 	{/each}
 </nav>
