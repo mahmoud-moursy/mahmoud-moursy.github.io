@@ -26,18 +26,6 @@ h6 {
     color: transparent;
 }
 
-.red-banner {
-    width: 100%;
-    background-color: red;
-    color: white;
-    margin: 0;
-    font-family: 'Open Sans';
-    overflow-y: hidden;
-
-    animation: linear forwards 5s hide;
-    transition: all 0.5s;
-}
-
 @keyframes hide {
     0% {
         height: 3rem;
