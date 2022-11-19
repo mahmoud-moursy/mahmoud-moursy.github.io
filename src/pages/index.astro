@@ -5,6 +5,7 @@ import ThemePicker from "../components/theme_picker.svelte";
 
 import "../styles/index.scss";
 ---
+
 <h4 class="red-banner">I'm a work-in-progress!</h4>
 
 <ThemePicker client:load />
@@ -15,49 +16,91 @@ import "../styles/index.scss";
             <h1>Mahmoud <span class="gradient-fwd">Moursy</span>.</h1>
             <h2><span class="gradient-bwd">Backend Engineer</span></h2>
         </div>
+        <Carousel client:idle />
     </header>
 
-    <Carousel client:idle />
+    <div id="showcase">
+        <div id="oss-showcase">
+            <h3>OSS <span class="gradient-fwd">Contributions</span></h3>
 
-    <h3>OSS <span class="gradient-fwd">Contributions</span></h3>
+            <div id="oss-contributions">
+                <div class="rust">
+                    <h4>Rust</h4>
 
-    <div id="oss-contributions">
-        <div class="rust">
-            <h4>Rust</h4>
+                    <p>
+                        Worked with the Rust release team lead to contribute
+                        nearly a thousand lines of code spanning over one
+                        hundred files in order to modernize macro formatting
+                        across the core and standard libraries.
+                    </p>
+                </div>
+                <div>
+                    <h4>Hyper</h4>
 
-            <p>
-                Worked with the Rust release team lead to contribute nearly a thousand lines of code spanning 
-                over one hundred files in order to modernize macro formatting across the core and standard 
-                libraries.
-            </p>
+                    <p>
+                        Removed redundant code and compartmentalized it into a
+                        function to reduce repitition.
+                    </p>
+                </div>
+                <div>
+                    <h4>Svelte</h4>
+
+                    <p>Fixed a grammatical error within the documentation</p>
+                </div>
+                <div>
+                    <h4>Node.JS</h4>
+
+                    <p>
+                        Contributed to docs regarding finding memory leaks
+                        within Node's source code
+                    </p>
+                </div>
+                <div>
+                    <h4>Next.JS</h4>
+
+                    <p>
+                        Rewrote portions of the documentation (as well as code
+                        samples) to reduce redundancy and increase clarity.
+                    </p>
+                </div>
+            </div>
         </div>
-        <div>
-            <h4>Hyper</h4>
+        <div id="project-showcase">
+            <h3>Top Projects</h3>
 
-            <p>
-                Removed redundant code and compartmentalized it into a function to reduce repitition.
-            </p>
+            <div id="top-projects">
+                <div>
+                    <h4>Hello</h4>
+                    <p>Read me.</p>
+                </div>
+                <div>
+                    <h4>Hello</h4>
+                    <p>Read me.</p>
+                </div>
+            </div>
         </div>
-        <div>
-            <h4>Svelte</h4>
+        <div id="tools-showcase">
+            <h3>My toolbox</h3>
 
-            <p>
-                Fixed a grammatical error within the documentation
-            </p>
-        </div>
-        <div>
-            <h4>Node.JS</h4>
-
-            <p>
-                Contributed to docs regarding finding memory leaks within Node's source code
-            </p>
-        </div>
-        <div>
-            <h4>Next.JS</h4>
-
-            <p>
-                Rewrote portions of the documentation (as well as code samples) to reduce redundancy and increase clarity.
-            </p>
+            <div>
+                <div id="toolbox">
+                    <ul>
+                        <li>Svelte</li>
+                        <li>TailwindCSS</li>
+                        <li>Scss</li>
+                        <li>Rust</li>
+                        <li>JavaScript/EcmaScript</li>
+                        <li>TypeScript</li>
+                        <li>Python</li>
+                        <li>Node.JS</li>
+                        <li>Deno</li>
+                        <li>WASM</li>
+                        <li>MySQL (and other SQL DBs)</li>
+                        <li>MongoDB</li>
+                        <li>Astro</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </Layout>

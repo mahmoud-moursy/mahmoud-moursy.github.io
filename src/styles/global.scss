@@ -1,39 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Inconsolata&family=Open+Sans:wght@500;600;800&display=swap');
 
+$mobile-design-threshold: 600px;
+
 $margin: 30px;
 
 * {
     margin: 0;
     box-sizing: border-box;
     color: var(--text);
+    font-family: "EB Gramond", serif;
+    overflow-wrap: break-word;
+    transition: all 0.2s;
 }
 
 :root {
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden;
 
     --accent: #E6CE19;
     --accent-compliment: #E5B61A;
+    --accent-contrast: hotpink;
 
-    :has(#light:checked) {
-        --text: #000;
-        --background: #F6F6F6;
-        --background-contrast: #FFF;
+    @supports selector(:has(a)) {
+        :has(#light:checked), .light {
+            --text: #000;
+            --background: #F6F6F6;
+            --background-contrast: #FFF;
+        }
+    
+        :has(#solarized:checked), .solarized {
+            --text: #002b36;
+            --background: #eee8d5;
+            --background-contrast: #fdf6e3;
+            --accent: #b58900;
+            --accent-compliment: #e5ac00;
+            --accent-contrast: #d33682;
+        }
+    
+        :has(#dark:checked), .dark {
+            --text: #fff;
+            --background: #222222;
+            --background-contrast: #2e2e2e;
+    
+            header, nav {
+                --background-contrast: #1c1c1c;
+            }
+        }
     }
 
-    :has(#solarized:checked) {
+    // Default to Solarized if the browser doesn't support
+    // CSS themes
+    @supports not selector(:has(a)) {
         --text: #002b36;
         --background: #eee8d5;
         --background-contrast: #fdf6e3;
-    }
+        --accent: #e5ac00;
+        --accent-compliment: #b58900;
 
-    :has(#dark:checked) {
-        --text: #fff;
-        --background: #222222;
-        --background-contrast: #2e2e2e;
-
-        header, nav {
-            --background-contrast: #1c1c1c;
+        #theme-controls {
+            display: none;
         }
     }
 }
@@ -55,7 +80,8 @@ a {
 }
 
 html {
-    font-family: Open Sans, sans-serif, system-ui;
+    overflow-x: hidden;
+    font-family: "Open Sans", sans-serif, system-ui;
     background-color: var(--background);
 }
 
@@ -64,15 +90,20 @@ h1,h2,h3,h4,h5,h6 {
     margin-right: $margin;
 }
 
-h3 {
-    margin-bottom: $margin;
+h1,h2,h3 {
+    font-family: "Open Sans", sans-serif;
+
+    * {
+        font-family: "Open Sans", sans-serif;
+    }
 }
 
 p, h4, h5, h6 {
-    font-family: EB Gramond, serif;
+    font-family: "EB Gramond", serif;
 }
 
 body {
+    overflow-x: hidden;
     background-color: var(--background);
 
     * {
@@ -81,7 +112,7 @@ body {
 }
 
 code {
-    font-family: Inconsolata, monospace;
+    font-family: "Inconsolata", monospace;
 
     text-align: left;
 }

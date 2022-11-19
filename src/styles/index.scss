@@ -27,11 +27,26 @@ h6 {
 }
 
 .red-banner {
-    width: 100vw;
+    width: 100%;
     background-color: red;
     color: white;
     margin: 0;
     font-family: 'Open Sans';
+    overflow-y: hidden;
+    animation: linear move-up 5s forwards;
+    transition: all;
+}
+
+@keyframes move-up {
+    0% {
+        height: max(3.5rem, 5vh);
+    }
+    95% {
+        height: max(3.5rem, 5vh);
+    }
+    100% {
+        height: 0vh;
+    }
 }
 
 p {
@@ -74,23 +89,33 @@ h6 {
         top: 1rem;
         right: 1rem;
 
-        background-color: rgba(#000000, 0.2);
         border-radius: 5px;
 
         padding: 0.5rem;
         padding-left: 1rem;
         padding-right: 1rem;
 
-        z-index: 99999;   
+        z-index: 99999;
+
+        width: fit-content;
     }
+
+    color: var(--text);
+    padding-top: 1rem;
+    width: 100%;
+    background-color: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header {
     --dot-spacing: 22px;
 
-    height: 50vh;
+    height: 100vh;
     min-height: 40rem;
 
+    // Dotted grid effect
     background-color: var(--background-contrast);
     background-size: var(--dot-spacing) var(--dot-spacing);
     background-image: radial-gradient(gray 2%, transparent 11%);
@@ -100,33 +125,71 @@ header {
 
     justify-content: center;
     align-items: flex-start;
+
+    width: 100%;
 }
 
 label[for="theme-picker"] {
     font-family: monospace;
-    color: white;
     text-shadow: rgba(#000000, 0.4) 1px 1px 5px;
     font-weight: bolder;
 }
 
 #oss-contributions {
-    display: grid;
+    @media screen and (min-width: 7in) {
+        grid-template-areas: 
+        "rust rust"
+        "hyper svelte"
+        "nodejs nextjs";
+        width: min-content;
+    }
 
-    height: min-content;
-
-    width: min-content;
-
-    grid-template-areas: 
-    "rust rust"
-    "hyper svelte"
-    "nodejs nextjs";
+    grid-template-areas: "rust"
+    "hyper"
+    "svelte"
+    "nodejs"
+    "nextjs";
 
     column-gap: 3rem;
     row-gap: 3rem;
 
     margin: auto;
 
+    margin-bottom: $margin;
+}
+
+#showcase {
+    display: grid;
+
+    @media screen and (min-width: 14.2in) {
+        grid-template-columns: 40% 27.5% 27.5%;
+        column-gap: 2rem;
+    }
+
     > div {
+        @media screen and (max-width: 7in) {
+            padding-right: 0;
+        }
+
+        column-span: 1;
+    }
+
+    > div > div {
+        width: calc(100% - 30px - $margin);
+
+        margin: auto;
+
+        display: grid;
+
+        height: min-content;
+
+        margin-bottom: $margin;
+    }
+
+    // Child div contains title and grid
+    // Grid is a div, which must be accessed
+    // Grid contains sub-divs which are what we want to style.
+    > div > div > div {
         @include mixins.outline-hover;
 
         background-color: var(--background-contrast);
@@ -138,7 +201,35 @@ label[for="theme-picker"] {
         padding: 2rem;
     }
 
-    margin-bottom: $margin;
+    h3 {
+        text-align: center;
+        margin: auto;
+        margin-bottom: $margin;
+    }
+}
+
+#top-projects {
+    display: flex;
+    flex-direction: column;
+
+    > div {
+        margin-bottom: 3rem;
+    }
+}
+
+#toolbox {
+    font-weight: bolder;
+    
+    @media screen and (max-width: 14.2in) {
+        ul {
+            display: grid;
+            grid-template-columns: 33.333333% 33.333333% 33.333333%;
+            column-gap: 2rem;
+        }   
+    }
+    li {
+        line-height: 1.45rem;
+    }
 }
 
 .hidden {
