@@ -8,7 +8,7 @@
 		overflow-x: hidden;
 		overflow-y: hidden;
 
-		height: max-content;
+		min-height: max-content;
 
 		@media screen and (max-width: 7in) {
 			height: 22rem;
