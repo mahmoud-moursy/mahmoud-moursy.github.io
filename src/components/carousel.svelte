@@ -129,10 +129,10 @@
 console.log(add(3 4))</pre>
 		</code>
 	</Card>
-	<Card subtitle="A small operating system." title="FiddleOS">
-		<h5>Note: FiddleOS is a work-in-progress</h5>
+	<Card subtitle="A small operating system." title="Sprinkles OS">
+		<h5>Note: SprinklesOS is a work-in-progress</h5>
 		<p>
-			FiddleOS is an operating system that's small, and can run on x86_64 desktops. <br>
+			SprinklesOS is an operating system that's small, and can run on x86_64 desktops. <br>
 			Planned features include:	
 		</p>
 		<ul>
