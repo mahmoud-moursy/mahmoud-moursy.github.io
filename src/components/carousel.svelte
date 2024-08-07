@@ -107,40 +107,17 @@
 	println(x) # Outputs 8. #
 }`}</pre></code>
 	</Card>
-	<Card subtitle="A social media website with a sprinkle on top."   title="Donut Planet" project="donut-planet-backend">
-	   <p>
-			Donut Planet is a social media app whose gimmick is that it <b>creates progression</b>. You must earn sprinkles to earn features such as
-			markdown language features, profile accent colours, profile pictures (to help filter out trolls) and potentially more. All users are given
-			an initial amount of sprinkles to purchase the basics (bold markdown text, profile picture, username change).
-		</p>
-	</Card>
 	<Card subtitle="A fantasy console that runs on bytecode."         title="ATC Fantacy Console" project="atc_console" >
 		<p>
 			The ATC Fantasy console has a whole ecosystem of applications; the <a href="https://github.com/T-O-R-U-S/bytecode_byter">ATC Byter</a> for 
-			code analysis, the <a href="https://github.com/T-O-R-U-S/asc_lang">ASC language</a> for writing code for the system and the 
+			bytecode analysis, the <a href="https://github.com/T-O-R-U-S/asc_lang">ASC language</a> for writing code for the system and the 
 			<a href="https://github.com/T-O-R-U-S/atc_console">console emulator</a>.
 		</p>
 	</Card>
-	<Card subtitle="A JavaScript preprocessor with syntactic sugar."  title="KongScript" project="kongscript">
-		<h5>Note: KongScript is a work-in-progress</h5>
-		<code>
-			<pre>let add = (x y) -> x + y
-
-console.log(add(3 4))</pre>
-		</code>
-	</Card>
-	<Card subtitle="A small operating system." title="Sprinkles OS">
-		<h5>Note: SprinklesOS is a work-in-progress</h5>
+	<Card subtitle="A barebones TUI library for barebones environments" title="Tuit" project="tuit">
 		<p>
-			SprinklesOS is an operating system that's small, and can run on x86_64 desktops. <br>
-			Planned features include:	
+			Tuit is the TUI library for the hard-mode Rust user. It is a `no_std`, `no_alloc` library that makes the most out of its constraints.
 		</p>
-		<ul>
-			<li>Text editor</li>
-			<li>Filesystem</li>
-			<li>Executables</li>
-			<li>(Potentially) scripting</li>
-		</ul>
 	</Card>
 	<Card subtitle="An OS simulator for a simpler age." title="CronexOS" project="cronexOS-y">
 		<p>
